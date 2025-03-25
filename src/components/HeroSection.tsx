@@ -1,7 +1,10 @@
+
 import React, { useEffect, useRef } from "react";
 import { Cpu, Sparkles, Zap, Rocket, LayoutGrid, ExternalLink } from "lucide-react";
+
 const HeroSection = () => {
   const imageRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (!imageRef.current) return;
@@ -15,15 +18,18 @@ const HeroSection = () => {
       const y = (e.clientY - top) / height - 0.5;
       imageRef.current.style.transform = `perspective(1000px) rotateY(${x * 5}deg) rotateX(${y * -5}deg)`;
     };
+
     const handleMouseLeave = () => {
       if (!imageRef.current) return;
       imageRef.current.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg)';
     };
+
     const element = imageRef.current;
     if (element) {
       element.addEventListener('mousemove', handleMouseMove as EventListener);
       element.addEventListener('mouseleave', handleMouseLeave);
     }
+
     return () => {
       if (element) {
         element.removeEventListener('mousemove', handleMouseMove as EventListener);
@@ -31,6 +37,7 @@ const HeroSection = () => {
       }
     };
   }, []);
+
   return <section className="min-h-screen pt-24 pb-16 flex items-center relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 bg-cyber-grid bg-[size:50px_50px] opacity-10"></div>
@@ -88,12 +95,7 @@ const HeroSection = () => {
               <div className="relative p-1 rounded-lg animate-border-flow">
                 <img src="https://img1.wsimg.com/isteam/ip/9fd6d942-5b46-4025-92e2-0f1ec2a7adf2/a-cinematic-shot-of-a-tree-of-knowledge-_l7epj.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1200,cg:true" alt="Tree of Knowledge" className="w-full h-auto rounded-lg object-cover shadow-xl" loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-cyber-background to-transparent opacity-40 rounded-lg"></div>
-                <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end">
-                  <div className="glass py-2 px-3 rounded-md max-w-xs">
-                    <p className="text-sm">
-                      Unlock the power of AI to turn your ideas into reality
-                    </p>
-                  </div>
+                <div className="absolute bottom-4 right-4">
                   <span className="flex items-center gap-1 text-xs bg-cyber-primary/90 text-black py-1.5 px-3 rounded-md hover:bg-cyber-primary transition-colors">
                     <span>Try Now</span>
                     <ExternalLink className="w-3 h-3" />
@@ -114,4 +116,5 @@ const HeroSection = () => {
       </div>
     </section>;
 };
+
 export default HeroSection;
