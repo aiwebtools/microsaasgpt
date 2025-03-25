@@ -109,31 +109,35 @@ const HeroSection = () => {
             className="relative transition-all duration-200 ease-out"
           >
             <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyber-primary to-cyber-secondary opacity-20 blur-xl animate-pulse-glow"></div>
-            <div className="relative p-1 rounded-lg animate-border-flow">
-              <img 
-                src="https://img1.wsimg.com/isteam/ip/9fd6d942-5b46-4025-92e2-0f1ec2a7adf2/a-cinematic-shot-of-a-tree-of-knowledge-_l7epj.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1200,cg:true" 
-                alt="Tree of Knowledge" 
-                className="w-full h-auto rounded-lg object-cover shadow-xl"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-cyber-background to-transparent opacity-40 rounded-lg"></div>
-              <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end">
-                <div className="glass py-2 px-3 rounded-md max-w-xs">
-                  <p className="text-sm">
-                    Unlock the power of AI to turn your ideas into reality
-                  </p>
+            <a
+              href="https://chatgpt.com/g/g-67b145035abc8191be5579cab8812d4e-microsaas-gpt"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block relative"
+            >
+              <div className="relative p-1 rounded-lg animate-border-flow">
+                <img 
+                  src="https://img1.wsimg.com/isteam/ip/9fd6d942-5b46-4025-92e2-0f1ec2a7adf2/a-cinematic-shot-of-a-tree-of-knowledge-_l7epj.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1200,cg:true" 
+                  alt="Tree of Knowledge" 
+                  className="w-full h-auto rounded-lg object-cover shadow-xl"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-cyber-background to-transparent opacity-40 rounded-lg"></div>
+                <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end">
+                  <div className="glass py-2 px-3 rounded-md max-w-xs">
+                    <p className="text-sm">
+                      Unlock the power of AI to turn your ideas into reality
+                    </p>
+                  </div>
+                  <span 
+                    className="flex items-center gap-1 text-xs bg-cyber-primary/90 text-black py-1.5 px-3 rounded-md hover:bg-cyber-primary transition-colors"
+                  >
+                    <span>Try Now</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </span>
                 </div>
-                <a 
-                  href="https://www.aiwebtools.ai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1 text-xs bg-cyber-primary/90 text-black py-1.5 px-3 rounded-md hover:bg-cyber-primary transition-colors"
-                >
-                  <span>Learn More</span>
-                  <ExternalLink className="w-3 h-3" />
-                </a>
               </div>
-            </div>
+            </a>
             <div className="absolute -top-4 -right-4 z-10 w-16 h-16 rounded-full bg-cyber-muted flex items-center justify-center border-4 border-cyber-background animate-float">
               <Cpu className="w-6 h-6 text-cyber-primary" />
             </div>

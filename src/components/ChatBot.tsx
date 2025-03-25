@@ -5,15 +5,12 @@ import {
   Bot,
   X,
   MessageCircle,
-  ExternalLink,
-  Mail,
-  Phone,
   Loader2
 } from "lucide-react";
 
-// OpenAI API key is deliberately not exposed in the frontend
-// This would normally be handled securely in a backend service
-const API_KEY = ""; // The actual key is not exposed here for security reasons
+// Note: API key is deliberately not exposed directly but is stored securely
+// In a real implementation, this would be handled through a backend service
+const API_KEY = ""; // API key is not exposed here for security reasons
 
 type Message = {
   role: "user" | "assistant";
