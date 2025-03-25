@@ -59,6 +59,14 @@ const DeploymentSection = () => {
                     <span className="w-2 h-2 rounded-full bg-cyber-primary"></span>
                     <span>React + Tailwind + ShadCN UI</span>
                   </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-cyber-primary"></span>
+                    <span>Less bugs than competitors</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-cyber-primary"></span>
+                    <span>Supabase integration for backend</span>
+                  </li>
                 </ul>
               </CardContent>
               <CardFooter>
@@ -111,6 +119,14 @@ const DeploymentSection = () => {
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-cyber-accent"></span>
                     <span>Simple integration</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-cyber-accent"></span>
+                    <span>GitHub hosting capabilities</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-cyber-accent"></span>
+                    <span>Supabase integration for backend</span>
                   </li>
                 </ul>
               </CardContent>
