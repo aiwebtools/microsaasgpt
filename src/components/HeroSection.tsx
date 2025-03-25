@@ -93,7 +93,7 @@ const HeroSection = () => {
             
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full">
               <div className="glass p-4 rounded-lg border-t border-l border-white/10 border-b border-r border-black/20">
-                <div className="text-cyber-primary font-bold mb-1">10+</div>
+                <div className="text-cyber-primary font-bold mb-1">Unlimited</div>
                 <div className="text-sm text-cyber-muted-foreground">Custom ideas per session</div>
               </div>
               <div className="glass p-4 rounded-lg border-t border-l border-white/10 border-b border-r border-black/20">
