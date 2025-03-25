@@ -63,7 +63,7 @@ MicroSaaS GPT is just one of our many flagship products designed to help entrepr
 ## Contact Information
 - Email: Contact@ai-webtools.com
 - Phone: (475) 800-8096
-- Headquarters: Boston, Massachusetts with satellite offices in San Francisco, London, and Singapore
+- Headquarters: Connecticut, United States with satellite offices in Boston, San Francisco, London, and Singapore
 
 ## Deployment Partners
 MicroSaaS GPT integrates seamlessly with code generators like Bolt and Lovable. After selecting an idea, you'll receive a detailed prompt that you can copy-paste into these tools to generate a functional application.
