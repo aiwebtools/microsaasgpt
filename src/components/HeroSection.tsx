@@ -77,7 +77,7 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <a href="https://chatgpt.com/g/g-67b145035abc8191be5579cab8812d4e-microsaas-gpt" target="_blank" rel="noopener noreferrer" className="cyber-button flex items-center justify-center gap-2">
                 <Zap className="w-5 h-5" />
-                <span>Start Generating Ideas</span>
+                <span>Start Generating Ideas And Master SaaS Prompts</span>
               </a>
               
               <a href="#how-it-works" className="cyber-button-alt flex items-center justify-center gap-2">
@@ -87,7 +87,7 @@ const HeroSection = () => {
 
               <a href="#deployment-options" className="cyber-button-secondary flex items-center justify-center gap-2">
                 <Code className="w-5 h-5" />
-                <span>Deploy Your Master SaaS Prompt</span>
+                <span>Deploy In Development Tools</span>
               </a>
             </div>
             

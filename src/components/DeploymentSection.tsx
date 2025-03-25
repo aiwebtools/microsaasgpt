@@ -15,7 +15,7 @@ const DeploymentSection = () => {
             <span className="w-2 h-2 rounded-full bg-cyber-primary"></span>
             <span>Build Your SaaS</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Deploy Your <span className="neon-text">Master SaaS Prompt</span></h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Deploy In <span className="neon-text">Development Tools</span></h2>
           <p className="text-cyber-muted-foreground">
             Choose your preferred deployment platform to turn your MicroSaaS idea into reality
           </p>
