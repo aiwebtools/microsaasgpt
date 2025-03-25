@@ -24,8 +24,36 @@ const ChatMessages = ({ messages, isLoading }: ChatMessagesProps) => {
     scrollToBottom();
   }, [messages]);
 
+  // Enhanced formatMessage function to make URLs, emails, and phone numbers clickable
   const formatMessage = (content: string) => {
-    return { __html: content };
+    if (content.includes('<a href=')) {
+      // If content already has HTML links, preserve them
+      return { __html: content };
+    }
+    
+    // Regex patterns for URLs, emails, and phone numbers
+    const urlPattern = /(https?:\/\/[^\s]+)/g;
+    const emailPattern = /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g;
+    const phonePattern = /(\(\d{3}\)\s*\d{3}-\d{4}|\d{3}[-.\s]\d{3}[-.\s]\d{4}|\(\d{3}\)\s*\d{3}\s*\d{4}|\d{10})/g;
+    
+    // Replace URLs with HTML links
+    let formattedContent = content.replace(urlPattern, (url) => {
+      return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-cyber-primary hover:underline">${url}</a>`;
+    });
+    
+    // Replace emails with HTML links
+    formattedContent = formattedContent.replace(emailPattern, (email) => {
+      return `<a href="mailto:${email}" class="text-cyber-primary hover:underline">${email}</a>`;
+    });
+    
+    // Replace phone numbers with HTML links
+    formattedContent = formattedContent.replace(phonePattern, (phone) => {
+      // Normalize phone number by removing non-digit characters
+      const normalizedPhone = phone.replace(/\D/g, '');
+      return `<a href="tel:${normalizedPhone}" class="text-cyber-primary hover:underline">${phone}</a>`;
+    });
+    
+    return { __html: formattedContent };
   };
 
   return (
