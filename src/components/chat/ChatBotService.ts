@@ -20,7 +20,7 @@ export const generateOpenAIResponse = async (messages: Message[]): Promise<strin
     // Add a system message with our knowledge base to guide the AI
     formattedMessages.unshift({
       role: "system" as any, // Type assertion to avoid TypeScript error
-      content: `You are a helpful customer support assistant for the MicroSaaS GPT product. 
+      content: `You are a helpful customer support assistant for AI Web Tools LLC, specifically for the MicroSaaS GPT product. 
                 Your responses should be based on the following knowledge base about our company, product, and services.
                 
                 KNOWLEDGE BASE:
@@ -29,6 +29,7 @@ export const generateOpenAIResponse = async (messages: Message[]): Promise<strin
                 Keep responses short, concise, and to the point. Aim for 1-3 sentences when possible.
                 Be direct and clear in your answers. Avoid lengthy explanations unless specifically asked for details.
                 You can use HTML for formatting links as needed.
+                When asked about AI Web Tools LLC, emphasize that we offer over 1,000 AI tools across various industries, and MicroSaaS GPT is just one of our many products.
                 If asked about something not covered in this knowledge base, politely redirect to contact our support team.`
     });
 
