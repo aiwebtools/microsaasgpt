@@ -38,9 +38,11 @@ const DeploymentSection = () => {
               </CardHeader>
               <CardContent>
                 <div className="mb-4">
-                  <img 
-                    src="https://img1.wsimg.com/isteam/ip/9fd6d942-5b46-4025-92e2-0f1ec2a7adf2/a-cinematic-shot-of-a-tree-of-knowledge-_l7epj.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1200,cg:true" 
-                    alt="Lovable Platform" 
+                  <video 
+                    src="https://lovable.dev/videos/lovable-heart.mp4"
+                    autoPlay
+                    muted
+                    loop
                     className="w-full h-auto rounded-lg object-cover shadow-xl border border-cyber-primary/30"
                   />
                 </div>
