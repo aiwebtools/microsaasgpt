@@ -70,29 +70,31 @@ const Header = () => {
           </a>
 
           <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center gap-1 text-cyber-foreground hover:text-cyber-primary transition-colors font-medium">
+            <DropdownMenuTrigger className="group flex items-center gap-1 text-[#F5D300] hover:text-[#FFE175] font-bold transition-all duration-300 border border-[#F5D300]/30 px-3 py-1.5 rounded-full bg-[#F5D300]/10 hover:bg-[#F5D300]/20 hover:shadow-[0_0_15px_rgba(245,211,0,0.5)] animate-pulse-glow">
               DEVELOP YOUR IDEA
-              <ChevronDown className="w-4 h-4" />
+              <ChevronDown className="w-4 h-4 group-hover:translate-y-0.5 transition-transform duration-300" />
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-cyber-muted border border-cyber-primary/20 backdrop-blur-lg">
-              <DropdownMenuItem className="focus:bg-cyber-primary/10 cursor-pointer">
+            <DropdownMenuContent className="bg-gradient-to-b from-[#FFD700]/90 to-[#B8860B]/90 backdrop-blur-lg border-2 border-[#FFD700] p-1 shadow-[0_0_20px_rgba(245,211,0,0.6)] animate-border-flow">
+              <DropdownMenuItem className="my-1 hover:bg-white/20 focus:bg-white/20 text-black font-medium transition-all duration-200 rounded-md cursor-pointer px-4 py-2.5">
                 <a 
                   href="https://lovable.dev/?via=aiwebtools"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full"
+                  className="w-full flex items-center gap-2"
                 >
-                  Use Lovable to Deploy
+                  <span className="bg-black/20 p-1 rounded-full">💎</span>
+                  <span>Use Lovable to Deploy</span>
                 </a>
               </DropdownMenuItem>
-              <DropdownMenuItem className="focus:bg-cyber-primary/10 cursor-pointer">
+              <DropdownMenuItem className="my-1 hover:bg-white/20 focus:bg-white/20 text-black font-medium transition-all duration-200 rounded-md cursor-pointer px-4 py-2.5">
                 <a 
                   href="https://bolt.new/?via=aiwebtools"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full"
+                  className="w-full flex items-center gap-2"
                 >
-                  Use Bolt to Deploy
+                  <span className="bg-black/20 p-1 rounded-full">⚡</span>
+                  <span>Use Bolt to Deploy</span>
                 </a>
               </DropdownMenuItem>
             </DropdownMenuContent>
@@ -150,23 +152,25 @@ const Header = () => {
             </a>
 
             <div className="py-2">
-              <div className="font-medium mb-2">DEVELOP YOUR IDEA</div>
-              <div className="ml-4 flex flex-col gap-2">
+              <div className="font-bold text-[#F5D300] mb-2 px-3 py-1.5 rounded-full bg-[#F5D300]/10 inline-block">DEVELOP YOUR IDEA</div>
+              <div className="ml-4 flex flex-col gap-2 bg-gradient-to-b from-[#FFD700]/30 to-[#B8860B]/30 p-3 rounded-lg border border-[#F5D300]/50 shadow-[0_0_10px_rgba(245,211,0,0.3)]">
                 <a 
                   href="https://lovable.dev/?via=aiwebtools"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-cyber-foreground hover:text-cyber-primary transition-colors"
+                  className="text-[#F5D300] hover:text-[#FFE175] transition-colors flex items-center gap-2 py-1.5"
                 >
-                  Use Lovable to Deploy
+                  <span className="bg-black/20 p-1 rounded-full">💎</span>
+                  <span>Use Lovable to Deploy</span>
                 </a>
                 <a 
                   href="https://bolt.new/?via=aiwebtools"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-cyber-foreground hover:text-cyber-primary transition-colors"
+                  className="text-[#F5D300] hover:text-[#FFE175] transition-colors flex items-center gap-2 py-1.5"
                 >
-                  Use Bolt to Deploy
+                  <span className="bg-black/20 p-1 rounded-full">⚡</span>
+                  <span>Use Bolt to Deploy</span>
                 </a>
               </div>
             </div>
