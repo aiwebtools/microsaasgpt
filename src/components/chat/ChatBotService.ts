@@ -1,10 +1,60 @@
 
 // Note: API key is deliberately not exposed directly but is stored securely
 // In a real implementation, this would be handled through a backend service
-const API_KEY = ""; // API key is not exposed here for security reasons
-
 import { Message } from "./ChatMessages";
 
+// Default fallback responses if API calls fail
+const fallbackResponses = {
+  default: "Thank you for your question. For specific information about MicroSaaS GPT, you can explore our website or contact our support team at <a href='mailto:Contact@ai-webtools.com' class='text-cyber-primary hover:underline'>Contact@ai-webtools.com</a>. How else can I assist you today?"
+};
+
+// Make a request to the OpenAI API
+export const generateOpenAIResponse = async (messages: Message[]): Promise<string> => {
+  try {
+    // Format messages for OpenAI
+    const formattedMessages = messages.map(message => ({
+      role: message.role,
+      content: message.content
+    }));
+
+    // Add a system message to guide the AI
+    formattedMessages.unshift({
+      role: "system",
+      content: `You are a helpful assistant for the MicroSaaS GPT product. 
+                MicroSaaS GPT is an AI-powered tool that helps entrepreneurs and developers generate custom micro SaaS ideas based on their target audience. 
+                It provides detailed blueprints, feature lists, and code-ready prompts that can be used with AI code generators to rapidly build functional applications.
+                Keep responses concise and helpful. You can use HTML for formatting links as needed.`
+    });
+
+    // API request
+    const response = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${process.env.OPENAI_API_KEY || ''}`
+      },
+      body: JSON.stringify({
+        model: 'gpt-4o-mini',
+        messages: formattedMessages,
+        temperature: 0.7,
+        max_tokens: 500
+      })
+    });
+
+    if (!response.ok) {
+      console.error('OpenAI API error:', await response.text());
+      return fallbackResponses.default;
+    }
+
+    const data = await response.json();
+    return data.choices[0].message.content;
+  } catch (error) {
+    console.error('Error calling OpenAI API:', error);
+    return fallbackResponses.default;
+  }
+};
+
+// For backward compatibility and fallback functionality
 export const generateResponse = (query: string): string => {
   const lowerQuery = query.toLowerCase();
   
@@ -42,5 +92,5 @@ export const generateResponse = (query: string): string => {
   }
   
   // Default response
-  return "Thank you for your question. For specific information about MicroSaaS GPT, you can explore our website or contact our support team at <a href='mailto:Contact@ai-webtools.com' class='text-cyber-primary hover:underline'>Contact@ai-webtools.com</a>. How else can I assist you today?";
+  return fallbackResponses.default;
 };
