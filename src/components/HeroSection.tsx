@@ -85,9 +85,9 @@ const HeroSection = () => {
                 <span>How It Works</span>
               </a>
 
-              <a href="#deployment-options" className="cyber-button-secondary flex items-center justify-center gap-2">
+              <a href="#deployment-options" className="cyber-button-secondary flex items-center h-12 justify-center gap-2 rounded-md border border-cyber-primary/50 bg-cyber-muted hover:bg-cyber-muted/80 shadow-[0_0_10px_rgba(8,247,254,0.3)]">
                 <Code className="w-5 h-5" />
-                <span>Deploy In Development Tools</span>
+                <span>Deploy With These Development Tools</span>
               </a>
             </div>
             

@@ -103,6 +103,12 @@
            active:scale-95 active:shadow-none;
   }
   
+  .cyber-button-secondary {
+    @apply px-6 py-3 bg-cyber-muted/80 text-cyber-primary font-bold
+           hover:bg-cyber-muted hover:shadow-[0_0_15px_rgba(8,247,254,0.5)] transition-all 
+           active:scale-95 active:shadow-none;
+  }
+  
   .cyber-card {
     @apply glass p-6 rounded-lg border-t border-l border-white/10 border-b border-r border-black/20
            hover:border-cyber-primary/30 transition-all duration-300;

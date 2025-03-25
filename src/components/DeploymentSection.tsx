@@ -15,7 +15,7 @@ const DeploymentSection = () => {
             <span className="w-2 h-2 rounded-full bg-cyber-primary"></span>
             <span>Build Your SaaS</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Deploy In <span className="neon-text">Development Tools</span></h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Deploy With These <span className="neon-text">Development Tools</span></h2>
           <p className="text-cyber-muted-foreground">
             Choose your preferred deployment platform to turn your MicroSaaS idea into reality
           </p>
@@ -66,7 +66,7 @@ const DeploymentSection = () => {
                   rel="noopener noreferrer"
                   className="w-full"
                 >
-                  <Button className="w-full bg-cyber-primary text-black hover:bg-cyber-primary/80 flex items-center gap-2">
+                  <Button className="w-full h-12 bg-cyber-primary text-black hover:bg-cyber-primary/80 flex items-center gap-2 shadow-[0_0_10px_rgba(8,247,254,0.4)] rounded-md border border-cyber-primary/50">
                     Deploy with Lovable
                     <ExternalLink className="w-4 h-4" />
                   </Button>
@@ -119,7 +119,7 @@ const DeploymentSection = () => {
                   rel="noopener noreferrer"
                   className="w-full"
                 >
-                  <Button className="w-full bg-cyber-accent text-black hover:bg-cyber-accent/80 flex items-center gap-2">
+                  <Button className="w-full h-12 bg-cyber-accent text-black hover:bg-cyber-accent/80 flex items-center gap-2 shadow-[0_0_10px_rgba(245,211,0,0.4)] rounded-md border border-cyber-accent/50">
                     Deploy with Bolt
                     <ExternalLink className="w-4 h-4" />
                   </Button>
