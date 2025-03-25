@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { 
@@ -67,7 +66,7 @@ const Header = () => {
           >
             <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-green-300 to-green-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             <Sparkles className="w-4 h-4 relative z-10" />
-            <span className="relative z-10 font-bold">Prep Your App Idea</span>
+            <span className="relative z-10 font-bold">Prep Your App Idea WITH MICROSaaS GPT</span>
             <span className="absolute bottom-0 left-0 w-full h-[2px] bg-green-300 transform translate-y-[2px] group-hover:translate-y-0 transition-transform duration-300"></span>
           </a>
 
@@ -151,7 +150,7 @@ const Header = () => {
               className="relative overflow-hidden py-2 px-4 rounded-md bg-gradient-to-r from-green-400 to-green-600 text-black shadow-[0_0_10px_rgba(74,222,128,0.5)] flex items-center gap-2"
             >
               <Sparkles className="w-4 h-4" />
-              <span className="font-bold">Prep Your App Idea</span>
+              <span className="font-bold">Prep Your App Idea WITH MICROSaaS GPT</span>
             </a>
 
             <div className="py-2">
