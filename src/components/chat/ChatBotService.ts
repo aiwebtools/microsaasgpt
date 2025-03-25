@@ -26,7 +26,8 @@ export const generateOpenAIResponse = async (messages: Message[]): Promise<strin
                 KNOWLEDGE BASE:
                 ${knowledgeBase}
                 
-                Keep responses concise, helpful, and accurate based on this knowledge base. 
+                Keep responses short, concise, and to the point. Aim for 1-3 sentences when possible.
+                Be direct and clear in your answers. Avoid lengthy explanations unless specifically asked for details.
                 You can use HTML for formatting links as needed.
                 If asked about something not covered in this knowledge base, politely redirect to contact our support team.`
     });
@@ -41,8 +42,9 @@ export const generateOpenAIResponse = async (messages: Message[]): Promise<strin
       body: JSON.stringify({
         model: 'gpt-4o-mini',
         messages: formattedMessages,
-        temperature: 0.7,
-        max_tokens: 500
+        temperature: 0.5, // Lower temperature for more focused, deterministic responses
+        max_tokens: 150, // Reduced max tokens to encourage brevity
+        presence_penalty: 0.6 // Add slight penalty for repetitive content
       })
     });
 
