@@ -57,7 +57,6 @@ const HowItWorksSection = () => {
                 src="https://ideogram.ai/assets/image/lossless/response/AgWMYQQSRvOrRu13fmkGhA" 
                 alt="AI SaaS Development Process" 
                 className="w-full h-auto rounded-lg object-cover shadow-xl" 
-                loading="lazy" 
               />
             </div>
           </div>
