@@ -48,6 +48,21 @@ const HowItWorksSection = () => {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyber-muted to-transparent opacity-50"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
+        {/* Image placed above the section title */}
+        <div className="max-w-3xl mx-auto mb-12 transition-all duration-200 ease-out">
+          <div className="relative">
+            <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyber-secondary to-cyber-primary opacity-20 blur-xl animate-pulse-glow"></div>
+            <div className="relative p-1 rounded-lg animate-border-flow">
+              <img 
+                src="https://ideogram.ai/assets/image/lossless/response/AgWMYQQSRvOrRu13fmkGhA" 
+                alt="AI SaaS Development Process" 
+                className="w-full h-auto rounded-lg object-cover shadow-xl" 
+                loading="lazy" 
+              />
+            </div>
+          </div>
+        </div>
+        
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-1.5 bg-cyber-muted px-3 py-1 rounded-full text-sm mb-4">
             <span className="w-2 h-2 rounded-full bg-cyber-primary"></span>
