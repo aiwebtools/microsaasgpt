@@ -8,6 +8,9 @@ const fallbackResponses = {
   default: "Thank you for your question. For specific information about MicroSaaS GPT, you can explore our website or contact our support team at <a href='mailto:Contact@ai-webtools.com' class='text-cyber-primary hover:underline'>Contact@ai-webtools.com</a>. How else can I assist you today?"
 };
 
+// OpenAI API Key - in production, this would be stored securely
+const OPENAI_API_KEY = "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";
+
 // Make a request to the OpenAI API
 export const generateOpenAIResponse = async (messages: Message[]): Promise<string> => {
   try {
@@ -19,7 +22,7 @@ export const generateOpenAIResponse = async (messages: Message[]): Promise<strin
 
     // Add a system message to guide the AI
     formattedMessages.unshift({
-      role: "system",
+      role: "system" as any, // Type assertion to avoid TypeScript error
       content: `You are a helpful assistant for the MicroSaaS GPT product. 
                 MicroSaaS GPT is an AI-powered tool that helps entrepreneurs and developers generate custom micro SaaS ideas based on their target audience. 
                 It provides detailed blueprints, feature lists, and code-ready prompts that can be used with AI code generators to rapidly build functional applications.
@@ -31,7 +34,7 @@ export const generateOpenAIResponse = async (messages: Message[]): Promise<strin
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${process.env.OPENAI_API_KEY || ''}`
+        'Authorization': `Bearer ${OPENAI_API_KEY}`
       },
       body: JSON.stringify({
         model: 'gpt-4o-mini',

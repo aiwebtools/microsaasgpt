@@ -33,7 +33,7 @@ const ChatBot = () => {
     setIsLoading(true);
 
     try {
-      // Try to use the OpenAI integration
+      // Use the OpenAI integration with our API key
       const allMessages = [...messages, userMessage];
       const response = await generateOpenAIResponse(allMessages);
       
