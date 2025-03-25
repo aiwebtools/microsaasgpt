@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from "react";
-import { Cpu, Sparkles, Zap, Rocket, LayoutGrid, ExternalLink } from "lucide-react";
+import { Cpu, Sparkles, Zap, Rocket, LayoutGrid, ExternalLink, Code } from "lucide-react";
 
 const HeroSection = () => {
   const imageRef = useRef<HTMLDivElement>(null);
@@ -83,6 +83,11 @@ const HeroSection = () => {
               <a href="#how-it-works" className="cyber-button-alt flex items-center justify-center gap-2">
                 <LayoutGrid className="w-5 h-5" />
                 <span>How It Works</span>
+              </a>
+
+              <a href="#deployment-options" className="cyber-button-secondary flex items-center justify-center gap-2">
+                <Code className="w-5 h-5" />
+                <span>Deploy Your Master SaaS Prompt</span>
               </a>
             </div>
             

@@ -10,6 +10,7 @@ import FAQSection from "@/components/FAQSection";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import ChatBot from "@/components/ChatBot";
 import ConsentPopup from "@/components/ConsentPopup";
+import DeploymentSection from "@/components/DeploymentSection";
 
 const Index = () => {
   // Scroll to top on page load
@@ -25,6 +26,7 @@ const Index = () => {
         <HeroSection />
         <FeaturesSection />
         <HowItWorksSection />
+        <DeploymentSection />
         <TestimonialsSection />
         <FAQSection />
         <DisclaimerSection />
