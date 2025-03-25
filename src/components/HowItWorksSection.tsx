@@ -53,11 +53,13 @@ const HowItWorksSection = () => {
           <div className="relative">
             <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyber-secondary to-cyber-primary opacity-20 blur-xl animate-pulse-glow"></div>
             <div className="relative p-1 rounded-lg animate-border-flow">
-              <img 
-                src="https://ideogram.ai/assets/image/lossless/response/AgWMYQQSRvOrRu13fmkGhA" 
-                alt="AI SaaS Development Process" 
-                className="w-full h-auto rounded-lg object-cover shadow-xl" 
-              />
+              <a href="https://chatgpt.com/g/g-67b145035abc8191be5579cab8812d4e-microsaas-gpt" target="_blank" rel="noopener noreferrer">
+                <img 
+                  src="https://ideogram.ai/assets/image/lossless/response/AgWMYQQSRvOrRu13fmkGhA" 
+                  alt="AI SaaS Development Process" 
+                  className="w-full h-auto rounded-lg object-cover shadow-xl" 
+                />
+              </a>
             </div>
           </div>
         </div>
