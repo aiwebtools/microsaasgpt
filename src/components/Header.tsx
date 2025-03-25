@@ -63,10 +63,12 @@ const Header = () => {
             href="https://chatgpt.com/g/g-67b145035abc8191be5579cab8812d4e-microsaas-gpt"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-cyber-foreground hover:text-cyber-primary transition-colors font-medium flex items-center gap-1"
+            className="relative group overflow-hidden font-medium px-4 py-2 rounded-full bg-gradient-to-r from-green-400 to-green-600 text-black border border-green-400 shadow-[0_0_15px_rgba(74,222,128,0.6)] animate-pulse-glow hover:shadow-[0_0_30px_rgba(74,222,128,0.8)] transition-all duration-300 flex items-center gap-1"
           >
-            <Sparkles className="w-4 h-4" />
-            Prep Your App Idea
+            <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-green-300 to-green-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+            <Sparkles className="w-4 h-4 relative z-10" />
+            <span className="relative z-10 font-bold">Prep Your App Idea</span>
+            <span className="absolute bottom-0 left-0 w-full h-[2px] bg-green-300 transform translate-y-[2px] group-hover:translate-y-0 transition-transform duration-300"></span>
           </a>
 
           <DropdownMenu>
@@ -146,9 +148,10 @@ const Header = () => {
               href="https://chatgpt.com/g/g-67b145035abc8191be5579cab8812d4e-microsaas-gpt"
               target="_blank"
               rel="noopener noreferrer"
-              className="py-2 text-cyber-foreground hover:text-cyber-primary transition-colors"
+              className="relative overflow-hidden py-2 px-4 rounded-md bg-gradient-to-r from-green-400 to-green-600 text-black shadow-[0_0_10px_rgba(74,222,128,0.5)] flex items-center gap-2"
             >
-              Prep Your App Idea
+              <Sparkles className="w-4 h-4" />
+              <span className="font-bold">Prep Your App Idea</span>
             </a>
 
             <div className="py-2">
