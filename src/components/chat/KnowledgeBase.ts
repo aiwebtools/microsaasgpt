@@ -20,6 +20,25 @@ MicroSaaS GPT is an AI-powered tool that helps entrepreneurs and developers gene
 - Growth Planning: Built-in strategies for user acquisition, retention, and product evolution
 - Iterative Refinement: Continue improving your idea with AI-assisted feedback and optimization
 
+## Deployment Options
+We recommend two primary options for deploying your MicroSaaS application:
+
+### Lovable
+- AI-powered development assistant to help build your application
+- Instant deployment of your web application
+- Built on React + Tailwind + ShadCN UI for modern interfaces
+- Fewer bugs than competitors, leading to faster development
+- Seamless Supabase integration for backend functionality
+- Real-time collaboration and editing capabilities
+
+### Bolt
+- Quick deployment process for web applications
+- Modern web technologies for building robust applications
+- Simple integration with your workflow
+- GitHub hosting capabilities for version control
+- Supabase integration for backend functionality
+- Fast development cycle with AI assistance
+
 ## How It Works
 1. You identify your target audience
 2. The AI generates 10 tailored ideas
@@ -67,8 +86,16 @@ MicroSaaS GPT is just one of our many flagship products designed to help entrepr
 
 ## Deployment Partners
 MicroSaaS GPT integrates seamlessly with code generators like Bolt and Lovable. After selecting an idea, you'll receive a detailed prompt that you can copy-paste into these tools to generate a functional application.
-- Bolt: https://bolt.new/?via=aiwebtools
-- Lovable: https://lovable.dev/?via=aiwebtools
+
+### Lovable.dev
+- Website: https://lovable.dev/?via=aiwebtools
+- Features: AI-powered development assistant, instant deployment, React + Tailwind + ShadCN UI, fewer bugs than competitors, Supabase integration for backend functionality
+- Rating: 5/5 stars from users
+
+### Bolt.new
+- Website: https://bolt.new/?via=aiwebtools
+- Features: Quick deployment process, modern web technologies, simple integration, GitHub hosting capabilities, Supabase integration for backend
+- Rating: 4/5 stars from users
 
 # Legal Information
 
