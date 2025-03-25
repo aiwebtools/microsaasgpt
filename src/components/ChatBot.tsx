@@ -4,7 +4,7 @@ import { MessageCircle } from "lucide-react";
 import ChatHeader from "./chat/ChatHeader";
 import ChatMessages from "./chat/ChatMessages";
 import ChatInput from "./chat/ChatInput";
-import { generateResponse, generateOpenAIResponse } from "./chat/ChatBotService";
+import { generateOpenAIResponse } from "./chat/ChatBotService";
 import type { Message } from "./chat/ChatMessages";
 import { useToast } from "@/components/ui/use-toast";
 
@@ -33,7 +33,7 @@ const ChatBot = () => {
     setIsLoading(true);
 
     try {
-      // Use the OpenAI integration with our API key
+      // Use the OpenAI integration with our knowledge base
       const allMessages = [...messages, userMessage];
       const response = await generateOpenAIResponse(allMessages);
       
@@ -48,24 +48,21 @@ const ChatBot = () => {
     } catch (error) {
       console.error("Error generating AI response:", error);
       
-      // Fallback to pre-programmed responses
-      const fallbackResponse = generateResponse(userMessage.content);
+      // Notify the user of the error
+      toast({
+        title: "Connection error",
+        description: "We're having trouble connecting to our AI service. Please try again later.",
+        variant: "default",
+      });
       
       setMessages((prev) => [
         ...prev,
         {
           role: "assistant",
-          content: fallbackResponse,
+          content: "I apologize, but I'm having trouble connecting to our knowledge base. Please try again later or contact our support team at <a href='mailto:Contact@ai-webtools.com' class='text-cyber-primary hover:underline'>Contact@ai-webtools.com</a>.",
           timestamp: new Date(),
         },
       ]);
-      
-      // Notify the user of the fallback
-      toast({
-        title: "Using fallback responses",
-        description: "We couldn't connect to our AI service. Using pre-programmed responses instead.",
-        variant: "default",
-      });
     } finally {
       setIsLoading(false);
     }
