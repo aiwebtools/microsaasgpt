@@ -93,7 +93,7 @@ MicroSaaS GPT integrates seamlessly with code generators like Bolt and Lovable. 
 - Rating: 5/5 stars from users
 
 ### Bolt.new
-- Website: https://bolt.new/?via=aiwebtools
+- Website: https://bolt.new/?rid=iewkqu
 - Features: Quick deployment process, modern web technologies, simple integration, GitHub hosting capabilities, Supabase integration for backend
 - Rating: 4/5 stars from users
 

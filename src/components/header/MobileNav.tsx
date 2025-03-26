@@ -45,7 +45,7 @@ const DevelopSection = () => {
           <span>Use Lovable to Deploy</span>
         </a>
         <a 
-          href="https://bolt.new/?via=aiwebtools"
+          href="https://bolt.new/?rid=iewkqu"
           target="_blank"
           rel="noopener noreferrer"
           className="text-[#F5D300] hover:text-[#FFE175] transition-colors flex items-center gap-2 py-1.5"

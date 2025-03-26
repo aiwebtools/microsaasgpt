@@ -51,7 +51,7 @@ const DevelopDropdown = () => {
         </DropdownMenuItem>
         <DropdownMenuItem className="my-1 hover:bg-white/20 focus:bg-white/20 text-black font-medium transition-all duration-200 rounded-md cursor-pointer px-4 py-2.5">
           <a 
-            href="https://bolt.new/?via=aiwebtools"
+            href="https://bolt.new/?rid=iewkqu"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full flex items-center gap-2"

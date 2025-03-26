@@ -1,4 +1,3 @@
-
 import React from "react";
 import { ExternalLink, Star } from "lucide-react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -132,7 +131,7 @@ const DeploymentSection = () => {
               </CardContent>
               <CardFooter>
                 <a 
-                  href="https://bolt.new/?via=aiwebtools"
+                  href="https://bolt.new/?rid=iewkqu"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full"
