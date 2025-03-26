@@ -1,4 +1,3 @@
-
 import React from "react";
 import { ChevronDown, Sparkles } from "lucide-react";
 import {
@@ -37,7 +36,7 @@ const DevelopDropdown = () => {
         DEVELOP YOUR IDEA
         <ChevronDown className="w-4 h-4 group-hover:translate-y-0.5 transition-transform duration-300" />
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="bg-gradient-to-b from-[#FFD700]/90 to-[#B8860B]/90 backdrop-blur-lg border-2 border-[#FFD700] p-1 shadow-[0_0_20px_rgba(245,211,0,0.6)] animate-border-flow">
+      <DropdownMenuContent className="bg-gradient-to-b from-[#FFD700]/90 to-[#B8860B]/90 backdrop-blur-lg border-2 border-[#FFD700] p-1 shadow-[0_0_20px_rgba(245,211,0,0.6)]">
         <DropdownMenuItem className="my-1 hover:bg-white/20 focus:bg-white/20 text-black font-medium transition-all duration-200 rounded-md cursor-pointer px-4 py-2.5">
           <a 
             href="https://lovable.dev/?via=aiwebtools"
