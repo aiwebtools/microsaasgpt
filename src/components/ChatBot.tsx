@@ -79,7 +79,8 @@ const ChatBot = () => {
       ) : (
         <button
           onClick={() => setIsOpen(true)}
-          className="w-16 h-16 rounded-full bg-cyber-primary flex items-center justify-center shadow-lg hover:brightness-110 transition-all animate-pulse-glow"
+          className="w-16 h-16 rounded-full bg-[#F5D300] flex items-center justify-center shadow-lg hover:brightness-110 transition-all animate-green-pulse-glow hover:scale-105"
+          aria-label="Open chat support"
         >
           <MessageCircle className="w-7 h-7 text-black" />
         </button>
