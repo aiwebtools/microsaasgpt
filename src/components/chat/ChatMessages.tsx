@@ -68,7 +68,7 @@ const ChatMessages = ({ messages, isLoading }: ChatMessagesProps) => {
               className={`max-w-[80%] p-3 rounded-lg ${
                 message.role === "user" 
                   ? "bg-cyber-primary text-black" 
-                  : "bg-cyber-muted border border-cyber-primary/20"
+                  : "bg-[#F5D300]/80 border border-[#F5D300] text-black"
               }`}
             >
               {message.role === "assistant" ? (
@@ -78,7 +78,7 @@ const ChatMessages = ({ messages, isLoading }: ChatMessagesProps) => {
               )}
               <div 
                 className={`text-xs mt-1 ${
-                  message.role === "user" ? "text-black/70" : "text-cyber-muted-foreground"
+                  message.role === "user" ? "text-black/70" : "text-black/70"
                 }`}
               >
                 {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
@@ -88,10 +88,10 @@ const ChatMessages = ({ messages, isLoading }: ChatMessagesProps) => {
         ))}
         {isLoading && (
           <div className="flex justify-start">
-            <div className="max-w-[80%] p-3 rounded-lg bg-cyber-muted border border-cyber-primary/20">
+            <div className="max-w-[80%] p-3 rounded-lg bg-[#F5D300]/80 border border-[#F5D300] text-black">
               <div className="flex items-center gap-2">
-                <Loader2 className="w-4 h-4 text-cyber-primary animate-spin" />
-                <span className="text-cyber-muted-foreground">Typing...</span>
+                <Loader2 className="w-4 h-4 text-black animate-spin" />
+                <span className="text-black/70">Typing...</span>
               </div>
             </div>
           </div>
