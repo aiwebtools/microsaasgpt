@@ -48,53 +48,164 @@
   /* Dark mode is our default */
   html {
     color-scheme: dark;
+    overflow-x: hidden;
   }
 
   body {
-    @apply bg-cyber-background text-cyber-foreground;
+    @apply bg-cyber-background text-cyber-foreground relative;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
-    background-image: radial-gradient(circle at 50% 50%, rgba(8, 247, 254, 0.05) 0%, transparent 70%);
+    background-image: 
+      radial-gradient(circle at 20% 20%, rgba(255, 215, 0, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(8, 247, 254, 0.06) 0%, transparent 50%),
+      radial-gradient(circle at 40% 60%, rgba(254, 83, 187, 0.04) 0%, transparent 50%),
+      linear-gradient(135deg, rgba(255, 215, 0, 0.02) 0%, rgba(8, 247, 254, 0.02) 50%, rgba(254, 83, 187, 0.02) 100%);
+    animation: luminous-wave 15s ease-in-out infinite;
+    position: relative;
   }
 
-  /* Custom scrollbar */
+  /* Divine particle effects */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      radial-gradient(2px 2px at 20px 30px, rgba(255, 215, 0, 0.3), transparent),
+      radial-gradient(2px 2px at 40px 70px, rgba(8, 247, 254, 0.2), transparent),
+      radial-gradient(1px 1px at 90px 40px, rgba(254, 83, 187, 0.3), transparent),
+      radial-gradient(1px 1px at 130px 80px, rgba(255, 215, 0, 0.2), transparent),
+      radial-gradient(2px 2px at 160px 30px, rgba(8, 247, 254, 0.3), transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: particle-drift 20s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Ethereal mist overlay */
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      radial-gradient(ellipse at top left, rgba(255, 215, 0, 0.03) 0%, transparent 50%),
+      radial-gradient(ellipse at top right, rgba(8, 247, 254, 0.03) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom left, rgba(254, 83, 187, 0.03) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom right, rgba(255, 215, 0, 0.03) 0%, transparent 50%);
+    animation: ethereal-drift 12s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  /* Enhanced scrollbar */
   ::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
   }
 
   ::-webkit-scrollbar-track {
     @apply bg-cyber-muted;
+    border-radius: 10px;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-cyber-primary/50 rounded-full;
+    @apply bg-gradient-to-b from-cyber-accent via-cyber-primary to-cyber-secondary rounded-full;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-cyber-primary;
+    @apply bg-gradient-to-b from-cyber-primary via-cyber-accent to-cyber-secondary;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
   }
 }
 
 @layer components {
   .glass {
-    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-lg;
+    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-lg relative;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02));
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      0 0 20px rgba(255, 215, 0, 0.1);
   }
   
   .neon-border {
-    @apply border border-cyber-primary shadow-[0_0_15px_rgba(8,247,254,0.5)];
+    @apply border border-cyber-primary;
+    box-shadow: 
+      0 0 15px rgba(8, 247, 254, 0.5),
+      inset 0 0 10px rgba(8, 247, 254, 0.1);
+  }
+
+  .divine-border {
+    @apply border border-cyber-accent;
+    box-shadow: 
+      0 0 25px rgba(255, 215, 0, 0.6),
+      0 0 50px rgba(255, 215, 0, 0.3),
+      inset 0 0 15px rgba(255, 215, 0, 0.2);
+    animation: divine-border-flow 5s ease-in-out infinite;
   }
 
   .neon-text {
-    @apply text-cyber-primary drop-shadow-[0_0_8px_rgba(8,247,254,0.7)];
+    @apply text-cyber-primary;
+    text-shadow: 
+      0 0 8px rgba(8, 247, 254, 0.8),
+      0 0 16px rgba(8, 247, 254, 0.4);
+  }
+
+  .divine-text {
+    @apply text-cyber-accent;
+    text-shadow: 
+      0 0 10px rgba(255, 215, 0, 0.9),
+      0 0 20px rgba(255, 215, 0, 0.6),
+      0 0 30px rgba(255, 215, 0, 0.3);
+    animation: divine-shimmer 6s linear infinite;
   }
   
   .shimmer-text {
     @apply bg-gradient-to-r from-cyber-primary via-cyber-secondary to-cyber-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-text-shimmer;
   }
+
+  .divine-shimmer-text {
+    background: linear-gradient(90deg, 
+      rgba(255, 215, 0, 1) 0%, 
+      rgba(255, 223, 0, 1) 25%, 
+      rgba(255, 235, 59, 1) 50%, 
+      rgba(255, 193, 7, 1) 75%, 
+      rgba(255, 215, 0, 1) 100%);
+    background-size: 200% auto;
+    @apply bg-clip-text text-transparent animate-divine-shimmer;
+  }
   
   .cyber-button {
     @apply px-6 py-3 bg-gradient-to-r from-cyber-primary to-cyber-primary/70 text-black font-bold rounded transition-all 
            hover:from-cyber-primary/90 hover:to-cyber-primary hover:shadow-[0_0_15px_rgba(8,247,254,0.7)] 
-           active:scale-95 active:shadow-none;
+           active:scale-95 active:shadow-none relative overflow-hidden;
+  }
+
+  .divine-button {
+    @apply px-8 py-4 bg-gradient-to-r from-cyber-accent via-yellow-400 to-cyber-accent text-black font-bold rounded-lg transition-all 
+           hover:from-yellow-300 hover:via-cyber-accent hover:to-yellow-300 
+           active:scale-95 relative overflow-hidden;
+    box-shadow: 
+      0 0 20px rgba(255, 215, 0, 0.6),
+      0 0 40px rgba(255, 215, 0, 0.3),
+      inset 0 2px 0 rgba(255, 255, 255, 0.2);
+    animation: divine-pulse 4s ease-in-out infinite;
+  }
+
+  .divine-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: divine-shimmer 3s linear infinite;
   }
   
   .cyber-button-alt {
@@ -111,7 +222,66 @@
   
   .cyber-card {
     @apply glass p-6 rounded-lg border-t border-l border-white/10 border-b border-r border-black/20
-           hover:border-cyber-primary/30 transition-all duration-300;
+           hover:border-cyber-primary/30 transition-all duration-300 relative overflow-hidden;
+    animation: divine-ascend 1s ease-out;
+  }
+
+  .divine-card {
+    @apply glass p-8 rounded-xl relative overflow-hidden;
+    background: linear-gradient(135deg, 
+      rgba(255, 215, 0, 0.05) 0%, 
+      rgba(255, 223, 0, 0.03) 25%,
+      rgba(255, 235, 59, 0.05) 50%,
+      rgba(255, 193, 7, 0.03) 75%,
+      rgba(255, 215, 0, 0.05) 100%);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.3),
+      0 0 25px rgba(255, 215, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    animation: divine-float 6s ease-in-out infinite;
+  }
+
+  .divine-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, 
+      rgba(255, 215, 0, 0.6), 
+      rgba(255, 223, 0, 0.4), 
+      rgba(255, 235, 59, 0.6), 
+      rgba(255, 193, 7, 0.4));
+    border-radius: inherit;
+    z-index: -1;
+    animation: celestial-rotation 20s linear infinite;
+  }
+
+  .divine-section {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .divine-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 25% 25%, rgba(255, 215, 0, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(8, 247, 254, 0.06) 0%, transparent 50%),
+      linear-gradient(45deg, rgba(255, 215, 0, 0.02) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .divine-section > * {
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -131,5 +301,31 @@
   
   .glow-effect:hover::before {
     @apply opacity-20;
+  }
+
+  .divine-glow-effect {
+    @apply relative;
+  }
+  
+  .divine-glow-effect::before {
+    content: '';
+    @apply absolute inset-0 -z-10 opacity-0 blur-2xl transition-opacity duration-1000;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.4) 0%, rgba(255, 223, 0, 0.2) 50%, transparent 100%);
+  }
+  
+  .divine-glow-effect:hover::before {
+    @apply opacity-50;
+  }
+
+  .section-spacing {
+    @apply py-24 md:py-32;
+  }
+
+  .container-padding {
+    @apply px-6 md:px-8 lg:px-12;
+  }
+
+  .content-max-width {
+    @apply max-w-7xl mx-auto;
   }
 }

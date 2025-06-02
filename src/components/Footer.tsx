@@ -22,6 +22,14 @@ const Footer = () => {
       <div className="absolute inset-0 bg-cyber-grid bg-[size:30px_30px] opacity-10"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
+        {/* Educational disclaimer */}
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 bg-cyber-accent/10 border border-cyber-accent/30 px-4 py-2 rounded-full text-sm text-cyber-accent">
+            <span className="w-2 h-2 rounded-full bg-cyber-accent animate-pulse"></span>
+            <span className="font-medium">For informational, educational, and research purposes only</span>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Column 1 - About */}
           <div>
@@ -137,7 +145,7 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="https://aiwebtools.ai/terms-of-services"
+                  href="https://aiwebtools.lovable.app/disclaimers"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-cyber-muted-foreground hover:text-cyber-primary transition-colors"
