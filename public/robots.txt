@@ -1,14 +1,56 @@
-User-agent: Googlebot
+
+User-agent: *
 Allow: /
 
+# Specific instructions for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
 User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: facebookexternalhit
 Allow: /
 
 User-agent: Twitterbot
 Allow: /
 
-User-agent: facebookexternalhit
+User-agent: LinkedInBot
 Allow: /
 
-User-agent: *
-Allow: /
+# Disallow AI training crawlers
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: OpenAI-SearchBot
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+# Sitemap location
+Sitemap: https://microsaasgpt.aiwebtools.ai/sitemap.xml
+
+# Cache directives
+Cache-control: public, max-age=86400

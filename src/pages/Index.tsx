@@ -11,15 +11,38 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import ChatBot from "@/components/ChatBot";
 import ConsentPopup from "@/components/ConsentPopup";
 import DeploymentSection from "@/components/DeploymentSection";
+import SEOEnhancements from "@/components/SEOEnhancements";
 
 const Index = () => {
   // Scroll to top on page load
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    // Add structured data for better SEO
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "AI Web Tools - MicroSaaS GPT",
+      "description": "Generate profitable micro SaaS ideas with AI-powered development assistance",
+      "url": window.location.href,
+      "mainEntity": {
+        "@type": "SoftwareApplication",
+        "name": "MicroSaaS GPT",
+        "applicationCategory": "DeveloperApplication"
+      }
+    });
+    document.head.appendChild(script);
+    
+    return () => {
+      document.head.removeChild(script);
+    };
   }, []);
 
   return (
     <div className="min-h-screen bg-cyber-background text-cyber-foreground flex flex-col">
+      <SEOEnhancements />
       <Header />
       
       <main className="flex-1">
