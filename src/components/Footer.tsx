@@ -45,7 +45,7 @@ const Footer = () => {
               Your AI-powered micro SaaS idea generator and builder assistant, helping you turn innovative concepts into reality.
             </p>
             <a 
-              href="https://www.aiwebtools.ai" 
+              href="https://aiwebtools.lovable.app/?via=aiwebtools" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center text-cyber-primary hover:underline gap-1"
