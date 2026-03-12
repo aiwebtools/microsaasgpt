@@ -1,4 +1,5 @@
 
+
 import React from "react";
 import { Sparkles } from "lucide-react";
 
@@ -8,10 +9,12 @@ interface MobileNavProps {
 }
 
 const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
-  if (!isOpen) return null;
-
   return (
-    <div className="md:hidden bg-cyber-background/95 backdrop-blur-lg border-t border-cyber-primary/20 animate-fade-in">
+    <div 
+      className={`md:hidden bg-cyber-background/95 backdrop-blur-lg border-t border-cyber-primary/20 overflow-hidden transition-all duration-300 ease-in-out ${
+        isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0 border-t-0"
+      }`}
+    >
       <div className="container mx-auto py-4 px-4 flex flex-col gap-4">
         <a 
           href="https://chatgpt.com/g/g-67b145035abc8191be5579cab8812d4e-microsaas-gpt"
@@ -20,7 +23,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
           className="relative overflow-hidden py-2 px-4 rounded-md bg-gradient-to-r from-green-400 to-green-600 text-black shadow-[0_0_10px_rgba(74,222,128,0.5)] flex items-center gap-2"
         >
           <Sparkles className="w-4 h-4" />
-          <span className="font-bold">Prep Your App Idea WITH MICROSaaS GPT</span>
+          <span className="font-bold text-sm">Prep Your App Idea WITH MICROSaaS GPT</span>
         </a>
 
         <DevelopSection />
@@ -33,7 +36,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
 const DevelopSection = () => {
   return (
     <div className="py-2">
-      <div className="font-bold text-[#F5D300] mb-2 px-3 py-1.5 rounded-full bg-[#F5D300]/10 inline-block">DEVELOP YOUR IDEA</div>
+      <div className="font-bold text-[#F5D300] mb-2 px-3 py-1.5 rounded-full bg-[#F5D300]/10 inline-block text-sm">DEVELOP YOUR IDEA</div>
       <div className="ml-4 flex flex-col gap-2 bg-gradient-to-b from-[#FFD700]/30 to-[#B8860B]/30 p-3 rounded-lg border border-[#F5D300]/50 shadow-[0_0_10px_rgba(245,211,0,0.3)]">
         <a 
           href="https://lovable.dev/?via=aiwebtools"

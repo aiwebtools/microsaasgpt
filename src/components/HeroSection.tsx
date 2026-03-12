@@ -74,21 +74,23 @@ const HeroSection = () => {
             
             <p className="text-lg text-cyber-muted-foreground mb-8 max-w-xl">MicroSaaS GPT helps you ideate, structure, and build your next profitable Micro SaaS application with step-by-step guidance, from concept to deployment.</p>
             
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <a href="https://chatgpt.com/g/g-67b145035abc8191be5579cab8812d4e-microsaas-gpt" target="_blank" rel="noopener noreferrer" className="cyber-button flex items-center justify-center gap-2">
-                <Zap className="w-5 h-5" />
+            <div className="flex flex-col gap-3 mb-12 w-full">
+              <a href="https://chatgpt.com/g/g-67b145035abc8191be5579cab8812d4e-microsaas-gpt" target="_blank" rel="noopener noreferrer" className="cyber-button flex items-center justify-center gap-2 text-sm sm:text-base">
+                <Zap className="w-5 h-5 shrink-0" />
                 <span>Start Generating Ideas And Master SaaS Prompts</span>
               </a>
               
-              <a href="#how-it-works" className="cyber-button-alt flex items-center justify-center gap-2">
-                <LayoutGrid className="w-5 h-5" />
-                <span>How It Works</span>
-              </a>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a href="#how-it-works" className="cyber-button-alt flex items-center justify-center gap-2 flex-1">
+                  <LayoutGrid className="w-5 h-5 shrink-0" />
+                  <span>How It Works</span>
+                </a>
 
-              <a href="#deployment-options" className="cyber-button-secondary flex items-center h-12 justify-center gap-2 rounded-md border border-cyber-primary/50 bg-cyber-muted hover:bg-cyber-muted/80 shadow-[0_0_10px_rgba(8,247,254,0.3)]">
-                <Code className="w-5 h-5" />
-                <span>Deploy With These Development Tools</span>
-              </a>
+                <a href="#deployment-options" className="cyber-button-secondary flex items-center h-12 justify-center gap-2 rounded-md border border-cyber-primary/50 bg-cyber-muted hover:bg-cyber-muted/80 shadow-[0_0_10px_rgba(8,247,254,0.3)] flex-1">
+                  <Code className="w-5 h-5 shrink-0" />
+                  <span>Deploy With These Tools</span>
+                </a>
+              </div>
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full">
