@@ -206,7 +206,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-cyber-primary/10 py-6 flex flex-col items-center justify-center text-center">
           <a 
-            href="https://www.aiwebtools.ai"
+            href="https://aiwebtools.lovable.app/?via=aiwebtools"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1 text-cyber-muted-foreground hover:text-cyber-primary transition-colors"
