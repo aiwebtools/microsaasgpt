@@ -66,7 +66,7 @@ const HeroSection = () => {
               <span>AI-Powered SaaS Ideation & Development</span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               <span className="shimmer-text">Generate & Build</span> 
               <br />Your Next Micro SaaS 
               <br />in <span className="neon-text">Minutes</span>
