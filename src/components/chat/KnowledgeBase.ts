@@ -103,7 +103,7 @@ MicroSaaS GPT integrates seamlessly with code generators like Bolt and Lovable. 
 Our privacy policy follows OpenAI's guidelines. For more information, please visit: https://openai.com/policies/privacy-policy/
 
 ## Terms of Service
-For our terms of service, please visit: https://aiwebtools.ai/terms-of-services
+For our terms of service, please visit: https://aiwebtools.lovable.app/disclaimers
 
 ## Disclaimer
 - No Guarantees: MicroSaaS GPT provides ideas and guidance based on AI technology, but we make no guarantees regarding commercial success or viability.

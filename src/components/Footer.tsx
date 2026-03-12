@@ -45,7 +45,7 @@ const Footer = () => {
               Your AI-powered micro SaaS idea generator and builder assistant, helping you turn innovative concepts into reality.
             </p>
             <a 
-              href="https://www.aiwebtools.ai" 
+              href="https://aiwebtools.lovable.app/?via=aiwebtools" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center text-cyber-primary hover:underline gap-1"
@@ -118,7 +118,7 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="https://www.aiwebtools.ai"
+                  href="https://aiwebtools.lovable.app/?via=aiwebtools"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-cyber-muted-foreground hover:text-cyber-primary transition-colors"
@@ -193,7 +193,7 @@ const Footer = () => {
         {/* More AI Tools button */}
         <div className="flex justify-end mb-8">
           <a 
-            href="https://www.aiwebtools.ai"
+            href="https://aiwebtools.lovable.app/?via=aiwebtools"
             target="_blank"
             rel="noopener noreferrer" 
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-cyber-secondary hover:bg-cyber-secondary/10 text-cyber-secondary transition-all hover:shadow-[0_0_15px_rgba(254,83,187,0.5)]"
@@ -206,7 +206,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-cyber-primary/10 py-6 flex flex-col items-center justify-center text-center">
           <a 
-            href="https://www.aiwebtools.ai"
+            href="https://aiwebtools.lovable.app/?via=aiwebtools"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1 text-cyber-muted-foreground hover:text-cyber-primary transition-colors"

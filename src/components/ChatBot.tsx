@@ -69,9 +69,9 @@ const ChatBot = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
       {isOpen ? (
-        <div className="w-[350px] sm:w-[400px] h-[500px] flex flex-col glass rounded-2xl border border-cyber-primary/30 shadow-xl animate-fade-in">
+        <div className="w-[calc(100vw-2rem)] max-w-[400px] h-[min(500px,calc(100vh-6rem))] flex flex-col glass rounded-2xl border border-cyber-primary/30 shadow-xl animate-fade-in">
           <ChatHeader onClose={() => setIsOpen(false)} />
           <ChatMessages messages={messages} isLoading={isLoading} />
           <ChatInput onSendMessage={handleSendMessage} isLoading={isLoading} />
@@ -79,10 +79,10 @@ const ChatBot = () => {
       ) : (
         <button
           onClick={() => setIsOpen(true)}
-          className="w-16 h-16 rounded-full bg-[#F5D300] flex items-center justify-center shadow-lg hover:brightness-110 transition-all animate-green-pulse-glow hover:scale-105"
+          className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#F5D300] flex items-center justify-center shadow-lg hover:brightness-110 transition-all animate-green-pulse-glow hover:scale-105"
           aria-label="Open chat support"
         >
-          <MessageCircle className="w-7 h-7 text-black" />
+          <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7 text-black" />
         </button>
       )}
     </div>
